@@ -1,5 +1,5 @@
 # GitTalk
-Charlita de Dani y yo
+Charlita de Dani y Tomás
 
 #### Contents
 [Getting started](#1-getting-started)
