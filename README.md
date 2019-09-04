@@ -2,8 +2,8 @@
 Charlita de Dani y Tomás
 
 ### Contents
-[Getting started](#1-getting-started)
-[References](#references)
+* [Getting started](#1-getting-started)
+* [References](#references)
 
 ## 1. Getting started
 Git is a free an open source software that allows us to improve continously on a project. It is a distributed version control system in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows you yo start a PullRequest, which is a very useful interactive way of merging to Branches. It also provides a beautiful interface to do things that can be done using a terminal. 
