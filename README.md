@@ -1,8 +1,8 @@
 # GitTalk
 Charlita de Dani y yo
 
-## Contents
-[Getting started](##1. Getting started)
+#### Contents
+[Getting started](#1-getting-started)
 
 ## 1. Getting started
 Git is a free an open source software that allows us to improve continously on a project. It is a distributed version control system in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows you yo start a PullRequest, which is a very useful interactive way of merging to Branches. 
@@ -76,3 +76,5 @@ git checkout [SHA-1 of the commit]
 git checkout [name of the branch] ## to go back the last commit of the branch
 ```
 and then manually chose the files. 
+
+## References
