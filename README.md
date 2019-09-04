@@ -2,8 +2,9 @@
 Charlita de Dani y yo
 
 ## Contents
+[Getting started](## 1. Getting started)
 
-## Getting started
+## 1. Getting started
 Git is a free an open source software that allows us to improve continously on a project. It is a distributed version control system in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows you yo start a PullRequest, which is a very useful interactive way of merging to Branches. 
 
 
@@ -66,12 +67,12 @@ It will show you the history of your commits and the names. The names of the com
 ```
 git rm -r .
 git checkout [SHA-1] . ##  introducing the SHA-1 value
-git checkout [HEAD~n] . ## introducing the n latest brancg
-git checkout [name of the branch] ## to go the last commit of the branch
+git checkout [HEAD~n] . ## introducing the n latest branch
+git commit -m"retrieve"
 ```
-What this code does is A <- B <- C <-B. We may want to restore only one file, this can be done manually, i.e.
+Note that the dot `.` is important at the end of the commands. What this code does is A <- B <- C <-B, simple goes to an older version. We may want to restore only one file, this can be done manually, i.e.
 ```
 git checkout [SHA-1 of the commit]
+git checkout [name of the branch] ## to go back the last commit of the branch
 ```
 and then manually chose the files. 
-t
