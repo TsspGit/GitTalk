@@ -1,11 +1,12 @@
 # GitTalk
 Charlita de Dani y Tomás
 
-#### Contents
+### Contents
 [Getting started](#1-getting-started)
+[References](#references)
 
 ## 1. Getting started
-Git is a free an open source software that allows us to improve continously on a project. It is a distributed version control system in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows you yo start a PullRequest, which is a very useful interactive way of merging to Branches. 
+Git is a free an open source software that allows us to improve continously on a project. It is a distributed version control system in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows you yo start a PullRequest, which is a very useful interactive way of merging to Branches. It also provides a beautiful interface to do things that can be done using a terminal. 
 
 
 ### Git  commands 
@@ -70,6 +71,10 @@ git checkout [SHA-1] . ##  introducing the SHA-1 value
 git checkout [HEAD~n] . ## introducing the n latest branch
 git commit -m"retrieve"
 ```
+```
+I should explain more about the HEAD and ~^ or these things
+```
+
 Note that the dot `.` is important at the end of the commands. What this code does is A <- B <- C <-B, simple goes to an older version. We may want to restore only one file, this can be done manually, i.e.
 ```
 git checkout [SHA-1 of the commit]
@@ -78,3 +83,9 @@ git checkout [name of the branch] ## to go back the last commit of the branch
 and then manually chose the files. 
 
 ## References
+* [Git](https://git-scm.com/)
+* [GitHub](https://github.com/)
+* [bitbucket](https://bitbucket.org/)
+* [xuanxu](https://github.com/xuanxu/)
+* [Chacon, S., & Straub, B. (2014). Pro git. Apress.](https://git-scm.com/book/en/v2)
+* [Version control with Git, Coursera](https://www.coursera.org/learn/version-control-with-git)
