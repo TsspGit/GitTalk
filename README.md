@@ -4,8 +4,10 @@ Charlita de Dani y Tomás
 ### Contents
 * [Getting started](#1-getting-started)
 * [Advanced stuff](#2-advanced-stuff)
-* [References](#references)
+* [Workflows](#3-workflows)
 * [Hacktoberfest](#hacktoberfest)
+* [References](#references)
+
 
 ## 1. Getting started
 Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. It also provides an interactive interface to do the things that can be done using a terminal. 
@@ -174,6 +176,8 @@ $ git rebase rebase_master
   the same than before the rebase. This implies that we need to merge those two branches
 in order to collect the modifications.
 
+
+## 3. Workflows
 ## Hacktoberfest
 
 ## References
