@@ -1,6 +1,6 @@
 # GitTalk
-![alt text](https://github.com/TsspGit/GitTalk/ReadmePic/Branches.png)
-Charlita de Dani y Tomás
+
+![Branches](Branches.png)
 
 ### Contents
 * [Getting started](#1-getting-started)
