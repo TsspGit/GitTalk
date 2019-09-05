@@ -1,5 +1,6 @@
 # GitTalk
-Charlita de Dani y Tomás
+
+![Branches](Branches.png)
 
 ### Contents
 * [Getting started](#1-getting-started)
