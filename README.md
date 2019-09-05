@@ -11,7 +11,7 @@
 
 
 ## 1. Getting started
-Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. It also provides an interactive interface to do the things that can be done using a terminal. 
+Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. It also provides an interactive interface to do the things that can be done using Bash. 
 
 
 ### Git  commands 
@@ -75,27 +75,33 @@ git log --graph ## see the commit --graph
 git log --all --decorate --oneline --graph ## the usual thing to visualize
 
 ```
-It will show you the history of your commits and the names. The names of the commit are a SHA-1 (Secure Hash Algorithm) reference.  Note that we can always go to and old commit using checkout and the SHA-1 value of that commit.
+It will show you the history of your commits and the names. The names of the commit are a SHA-1 (Secure Hash Algorithm) reference.  Note that we can always go to and old commit using checkout and the SHA-1 value of that commit. Apart from SHA-1 values , there are user friendly names called references. HEAD and master are user friendly names. HEAD usually points to the last commit of the branch. However, if we checkout to another commit `git checkout [other commit]` , it will show you that HEAD is not in the last commit, so  **DONT LOSE YOUR HEAD!**.
 
 ### Problem: Want to retrieve some older version files?
 ```
-
 git rm -r .
 git checkout [SHA-1] . ##  introducing the SHA-1 value
-git checkout [HEAD~n] . ## introducing the n latest branch
 git commit -m"retrieve"
 ```
+What this code does is A <- B <- C <-B,which means that it simply recover an older version. We may want to restore only one file, this can be done manually, i.e.
 ```
-I should explain more about the HEAD and ~^ or these things
-```
-
-Note that the dot `.` is important at the end of the commands. What this code does is A <- B <- C <-B, simple goes to an older version. We may want to restore only one file, this can be done manually, i.e.
-```
-git checkout [SHA-1 of the commit]
+git checkout [SHA-1 of the commit] 
 git checkout [name of the branch] ## to go back the last commit of the branch
 ```
 and then manually chose the files. 
 
+HEAD may be important because we can refer to previous commits using `HEAD~n`. Where n represent n-older-version previous commit. For instance, if we want to see the diference between a 3 commits-older version and the current working directory we may use
+```
+git diff HEAD~3 file.txt
+```
+We can also retrieve older version using the reference HEAD, i.e. 
+```
+git rm -r .
+git checkout HEAD~n . 
+git commit -m"retrieve"
+```
+
+Another useful command is `git show [commit] file `, which displays what changes we made at an older commit as well as the commit message.  
 
 ## 2. Advanced stuff
 
