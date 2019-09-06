@@ -194,5 +194,5 @@ in order to collect the modifications.
 * [xuanxu](https://github.com/xuanxu/)
 * [Chacon, S., & Straub, B. (2014). Pro git. Apress.](https://git-scm.com/book/en/v2)
 * [Version control with Git, Coursera](https://www.coursera.org/learn/version-control-with-git)
-
+* [Software Carpentry, version control with Git](https://swcarpentry.github.io/git-novice/)
 
