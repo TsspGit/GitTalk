@@ -11,11 +11,11 @@
 
 
 ## 1. Getting started
-Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. It also provides an interactive interface to do the things that can be done using Bash. 
+Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. GitHub also provides an interactive way to do the things that can be done using a Linux Shell in regards to Git commands. 
 
 
 ### Git  commands 
-Here we review the most common commands through examples. We will introduce the use of Git through common situations where you may end up using it. Furtheremore, Git has a [documentation](https://git-scm.com/doc) and an official [book](https://git-scm.com/book/en/v2). For more information, see [references](#references)
+Here we will review the most common commands through examples. We will also introduce the use of Git through common situations where you may end up using it. Furtheremore, Git has a [documentation](https://git-scm.com/doc) and an official [book](https://git-scm.com/book/en/v2). For more information, see [references](#references).
 
 Git commands are typed in the terminal (shell) and have the following general structure
 ```
@@ -29,53 +29,81 @@ When you type `git help [commnand]`, things like this will appear in your termin
 ```
 -f or --flag ## Change the command behaviour, options of the commnand.
 [<placeholders>] ## replace the placeholder by the actual value, arguments.
-
 ```
+You can just try typing `git help` without `[command]` and the general help will be displayed where the basic commands are listed. 
 ### Example : creating repositories
-We will learn how to get a repository ready for battle. First you need to install Git, just visit the [Git web page](https://git-scm.com/downloads) and follow the instructions.
+We will learn how to get a repository ready for battle. First you need to [install Git](https://git-scm.com/downloads) and have a [GitHub account](https://github.com/), just follow the provided instructions .
 
-1. To create a remote repository, click at "create a remote repository" in GitHub and follow the instructions. 
-2. Create your local repository
+ 
+ #### Create our local repository
 * First, you need to configure the personal info 
-```$git help config ## This will show how config works
-$git config --global user.name "Your Name" ##Set your name 
-$git config --global user.email "Your@email" ##Set your email
-$git conf user.name (user.email) ## View your current settings 
+```git help config ## This will show how config works
+git config --global user.name "Your Name" ##Set your name 
+git config --global user.email "Your@email" ##Set your email
+git conf user.name (user.email) ## View your current settings 
 ```
-You can see that all this information has been added to the file .gitconfig . 
+Global means that the configuration will be set only for the user of the system. You can see that all this information has been added to the file `.gitconfig` . 
 
 ```
-$ cd
-$ gedit .gitconfig
+ cd
+ gedit .gitconfig
 ```
-Imagine we have different GitHub accounts (work and home) and we wish to push and pull our repo. Therefore, we need to configure the information locally, i,e  ` git config --local `. 
+Imagine we have different GitHub accounts (work and home) and we wish to `push` and `pull` our repo. Therefore, we need to configure the information locally, i,e  ` git config --local `.  
 
-* Clone our remote repository
+To create a new ropository use 
 ```
-git clone https://github.com/TsspGit/GitTalk.git 
+mkdir myrepo
+cd myrepo
+git init
 ```
-* Commit in our local repository 
- 1. Make changes in the Working Tree, for instance create a file.txt
- 2. Add this changes in the staging area
+in the directory where you want it. We can see that we have now a `.git` directory -- use `ls -a`--. Now we can create files, add them to the staging area  and commit them. 
+
+* Commit in our local repository: 
+ 1. Make changes in the Working Tree, for instance create a file.txt `touch file1.txt`
+ 2. Add these changes in the staging area
  ```
- git add file.txt
+ git add file1.txt
 ```
-If we have more than one file we add everything fast 
+If we have more than one file we can add everything fast 
 ```
 git add .
 ```
+we can always see the status of the staging area using `git status`. 
  3. Commit the changes to make it official
 ```
  git commit
 ```
-4. See the commits history use  `git log` . However, there are several options that can be helpful
+Edit file1.txt and create file2.txt. Then, do the same procedure. 
+4. In order to see the commits history use  `git log` . However, there are several options that can be helpful
 ```
 git log --oneline ##short description 
 git log --graph ## see the commit --graph 
-git log --all --decorate --oneline --graph ## the usual thing to visualize
+git log --all --decorate --oneline --graph ## the usual thing to visualize a nice diagram
+```
+It will show you the history of our commits and their names. The names of a commit are a SHA-1 (Secure Hash Algorithm) reference. Apart from SHA-1 values , there are user friendly names called references. HEAD and master are user friendly names. HEAD usually points to the last commit of the branch. However, if we checkout to another commit `git checkout [other commit]` , it will show you that HEAD is not in the last commit, so  **DONT LOSE YOUR HEAD!**.
+####  Create a remote repository
+We can create a remote repository using the interface that GitHub provide, and clone it to our computer
 
 ```
-It will show you the history of your commits and the names. The names of the commit are a SHA-1 (Secure Hash Algorithm) reference.  Note that we can always go to and old commit using checkout and the SHA-1 value of that commit. Apart from SHA-1 values , there are user friendly names called references. HEAD and master are user friendly names. HEAD usually points to the last commit of the branch. However, if we checkout to another commit `git checkout [other commit]` , it will show you that HEAD is not in the last commit, so  **DONT LOSE YOUR HEAD!**.
+git clone https://github.com/TsspGit/GitTalk.git 
+```
+Nevertheless, we can also push a local repository to GitHub, and thus creating a remote repository 
+```
+git remote add origin https://github.com/our-repo
+```
+origin is the usual name for the source-of-truth remote repository. You can have more than one remote repository using the command `git remote add [name] [path]`. Then we push or pull to the preferred remote repository 
+```
+git push -u origin master
+```
+Master is the name of the main branch (when use push, enter the branch that we wish to push) and `-u` is the flag of "set-upstream ". `-u` link the local branch to the remote branch and allows us use `git pull` without any arguments. To see the state of the remote repositories, type
+```
+git remote -v
+```
+If you are working as a team and a member of your team updates the remote repo, you can download the new features using pull, 
+```
+git pull 
+```
+
 
 ### Problem: Want to retrieve some older version files?
 ```
@@ -186,7 +214,7 @@ in order to collect the modifications.
 
 ## 3. Workflows
 ## Hacktoberfest
-
+Most important event ever
 ## References
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
