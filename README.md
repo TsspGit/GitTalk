@@ -71,16 +71,16 @@ git add .
 we can always see the status of the staging area using `git status`. 
  3. Commit the changes to make it official
 ```
- git commit
+ git commit -m"comments"
 ```
-Edit file1.txt and create file2.txt. Then, do the same procedure. 
-4. In order to see the commits history use  `git log` . However, there are several options that can be helpful
+The -m option allows us to introduce the message for the commit. However, if we just type `git commit`, Git will display a text editor to write the message. By default, the text editor is "vim". We can always change the text editor using `git config --global core.editor "text_editor"`. **Exercise: Edit file1.txt and create file2.txt. Then, commit the new files**. 
+4. In order to see the commits history use  `git log` . However, there are several options that can be helpful:
 ```
 git log --oneline ##short description 
 git log --graph ## see the commit --graph 
 git log --all --decorate --oneline --graph ## the usual thing to visualize a nice diagram
 ```
-It will show you the history of our commits and their names. The names of a commit are a SHA-1 (Secure Hash Algorithm) reference. Apart from SHA-1 values , there are user friendly names called references. HEAD and master are user friendly names. HEAD usually points to the last commit of the branch. However, if we checkout to another commit `git checkout [other commit]` , it will show you that HEAD is not in the last commit, so  **DONT LOSE YOUR HEAD!**.
+These options will show us the history of our commits and their names. The names of a commit are a SHA-1 (Secure Hash Algorithm) reference. Apart from SHA-1 values , there are user friendly names called references. HEAD and master are user friendly names. HEAD usually points to the last commit of the branch. However, if we checkout to another commit `git checkout [other commit]` , it will show you that HEAD is not in the last commit, so  **DONT LOSE YOUR HEAD!**.
 ####  Create a remote repository
 We can create a remote repository using the interface that GitHub provide, and clone it to our computer
 
@@ -213,6 +213,12 @@ in order to collect the modifications.
 
 
 ## 3. Workflows
+### Pull Requests & Issues
+
+### Gitflows
+
+### Privacity
+
 ## Hacktoberfest
 Most important event ever
 ## References
@@ -223,4 +229,4 @@ Most important event ever
 * [Chacon, S., & Straub, B. (2014). Pro git. Apress.](https://git-scm.com/book/en/v2)
 * [Version control with Git, Coursera](https://www.coursera.org/learn/version-control-with-git)
 * [Software Carpentry, version control with Git](https://swcarpentry.github.io/git-novice/)
-
+* [hacktoberfest 2019](https://hacktoberfest.digitalocean.com/)
