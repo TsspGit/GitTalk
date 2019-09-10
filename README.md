@@ -131,7 +131,42 @@ git commit -m"retrieve"
 
 Another useful command is `git show [commit] file `, which displays what changes we made at an older commit as well as the commit message.  
 
-## 2. Advanced stuff
+## 2. Merging example
+
+1. Create the branch merge1 and a file named mergear.txt
+```
+$ git checkout -b merge1 && touch mergear.txt 
+```
+
+2. Commit with message "mergear.txt created"
+
+3. From merge1 create a new branch named merge2 and write:
+"hola
+que tal"
+Inside mergear.txt
+
+4. Commit with message "change mergear.txt in merge2"
+
+5. Come back to merge1 and write:
+"adios"
+Inside mergear.txt
+
+6. Commit with message "change mergear.txt in merge1"
+
+7. At this point, we have and ancestor commit that the two branches share and two different commits in each of them. If we try to merge the two branches Git will tries a 3-way merge and it would fail. 
+```
+$ git merge merge2
+```
+
+8. The reason is that Git can't choose between changes performed in the same position of the file. In order to solve it we have to open the file and delete the lines with:
+<<<<<<< HEAD
+=======
+>>>>>>>
+Reorder the lines as you wish and commit.
+
+9. Delete merge2 branch.
+
+## 3. Advanced stuff
 
 ### Example fetch:
 It is possible to connect our local repository to as many remote repositories as we want.
