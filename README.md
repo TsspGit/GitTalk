@@ -165,6 +165,11 @@ $ git merge merge2
 Reorder the lines as you wish and commit.
 
 9. Delete merge2 branch.
+```
+$ git branch -D merge2
+Or if the branch has been pushed to the remote repository:
+$ git push origin --delete merge2
+```
 
 ## 3. Advanced stuff
 
@@ -218,30 +223,46 @@ $ git stash clear
 One way to change the commit's history is using **git rebase**. In this example we will
 integrate changes from one branch into another.
 
-The branch *rebase_master* contains predoc.py, which is a class that send the information
-of new employees to the database of the company. The commit is already done, but we would
-like to add a new method to firing people. The first step that we are going to take is to
-create a new branch named *fire*.
+Create a new named *rebase_master*:
 ```
-$ git checkout -b fire
+$ git checkout -b rebase_master
 ```
-- Add the next part of code inside the class on predoc.py:
+- Add a new file *wimp.py*, which is a class that creates a WIMP dark matter particle:
 ```
-def __del__(self):
-	print("You just fired ", self.name)
+class Wimp: 
+	v = 230 # km/s 
+	def __init__(self, mass): 
+		self.m = mass # GeV
+		print("A new WIMP particle has been created!\nmass: {} GeV\nv = {}".format(self.m, self
+		.v))
+	W = Wimp(100)
 ```
-- Commit the modification with the message 'add firing predoc.py'. 
+We would like to add a new class to create the target nucleus on the detector. The first step that we are going to take is to create a new branch named *nucleus*.
+$ git checkout -b nucleus
+```
+- Add the following part of code inside wimp.py just below the WIMP class:
+```
+class Nucleus:
+	v = 0 # at rest
+	def __init__(self, Z, N):
+		self.Z = Z 
+		self.N = N
+		self.A = self.Z + self.N
+		self.M = 931.5 * A * 1e-3 # GeV
+		print("A new nucleus has been created!\nMass number: {}\nMass: {} #GeV".format(self.A, self.M))
+```
+- Commit the modification with the message 'add nucleus to wimp.py'. 
 - At the moment you are working your collaborator creates a new file on *rebase_master*:
 ```
 $ touch newfile.txt
 ```
 - Commit it and run **git --all --decorate --oneline --graph - 4**. Notice that the
   working flow are no longer linear. 
-- Finally, checkout to fire branch and run:
+- Finally, checkout to *nucleus* branch and run:
 ```
 $ git rebase rebase_master
 ```
-- See how the working flow have change. The history of *fire* has been erased!
+- See how the working flow have change. The history of *nucleus* has been erased!
 - Let's finalize this example checking that the information contained in each branch is
   the same than before the rebase. This implies that we need to merge those two branches
 in order to collect the modifications.
