@@ -238,6 +238,7 @@ class Wimp:
 	W = Wimp(100)
 ```
 We would like to add a new class to create the target nucleus on the detector. The first step that we are going to take is to create a new branch named *nucleus*.
+```
 $ git checkout -b nucleus
 ```
 - Add the following part of code inside wimp.py just below the WIMP class:
