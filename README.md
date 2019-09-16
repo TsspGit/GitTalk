@@ -271,8 +271,9 @@ in order to collect the modifications.
 
 
 ## 3. Workflows
+Here, we will review good practices in regards to working as  a team. 
 ### Pull Requests & Issues
-
+Doing a pull request is a way of merging to branching using the GitHub online interface. 
 ### Gitflows
 
 ### Privacity
