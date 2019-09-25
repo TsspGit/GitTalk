@@ -42,16 +42,16 @@ git config --global user.name "Your Name" ##Set your name
 git config --global user.email "Your@email" ##Set your email
 git conf user.name (user.email) ## View your current settings 
 ```
-Global means that the configuration will be set only for the user of the system. You can see that all this information has been added to the file `.gitconfig` .  The line of code that works for me is the following 
-```
-git clone https://username@github.com/username/repo_name
-```
+Global means that the configuration will be set only for the user of the system. You can see that all this information has been added to the file `.gitconfig` .  
 
 ```
  cd
  gedit .gitconfig
 ```
-Imagine we have different GitHub accounts (work and home) and we wish to `push` and `pull` our repo. Therefore, we need to configure the information locally, i,e  ` git config --local `.  
+Imagine we have different GitHub accounts (work and home) and we wish to `push` and `pull` our repo. Therefore, we need to configure the information locally, i,e  ` git config --local `.  Moreover, the following code line worked for me well (otherwise git did not identify private repos)
+```
+git clone https://username@github.com/username/repo_name
+```
 
 To create a new ropository use 
 ```
