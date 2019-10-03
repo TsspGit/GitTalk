@@ -42,13 +42,16 @@ git config --global user.name "Your Name" ##Set your name
 git config --global user.email "Your@email" ##Set your email
 git conf user.name (user.email) ## View your current settings 
 ```
-Global means that the configuration will be set only for the user of the system. You can see that all this information has been added to the file `.gitconfig` . 
+Global means that the configuration will be set only for the user of the system. You can see that all this information has been added to the file `.gitconfig` .  
 
 ```
  cd
  gedit .gitconfig
 ```
-Imagine we have different GitHub accounts (work and home) and we wish to `push` and `pull` our repo. Therefore, we need to configure the information locally, i,e  ` git config --local `.  
+Imagine we have different GitHub accounts (work and home) and we wish to `push` and `pull` our repo. Therefore, we need to configure the information locally, i,e  ` git config --local `.  Moreover, the following code line worked for me well (otherwise git did not identify private repos)
+```
+git clone https://username@github.com/username/repo_name
+```
 
 To create a new ropository use 
 ```
@@ -271,7 +274,14 @@ in order to collect the modifications.
 
 
 ## 3. Workflows
+Here, we will review good practices in regards to working as  a team. 
 ### Pull Requests & Issues
+Doing a pull request is a way of merging to branching using the GitHub online interface. Issues can be used to keep tracks of enhancements. 
+* Workflow
+1. There is a version of the project wich is consider the 
+
+
+
 
 ### Gitflows
 
