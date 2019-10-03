@@ -276,19 +276,20 @@ in order to collect the modifications.
 ## 3. Workflows
 Here, we will review good practices in regards to working as  a team. 
 ### Pull Requests & Issues
-Doing a pull request is a way of merging to branching using the GitHub online interface. Issues can be used to keep tracks of enhancements. 
-* Workflow
-1. There is a version of the project wich is consider the 
-
-
-
+Doing a pull request is a way of merging two branches using the GitHub online interface. Issues can be used to keep tracks of enhancements. 
 
 ### Gitflows
+1. There is a version of the project which is considered the source of thruth and it is a remote repository.
+2. Issues are created as statements of problems and bugs... , and possible enhacements to our software. 
+3. For every issue it is recommended to create *a new branch* and work on that issue, never modifying master. 
+4. After satisfactorily modifying our software in the *the new branch*, request for a team review and pull request. 
+
+Note that  pull requests can be created at the beginning . Future improvements of our project will be reflected as commits in the correspoding pull request. Finally, when everything is ready branches can be merged. 
 
 ### Privacity
 
 ## Hacktoberfest
-Most important event ever
+Most important event ever taking place in October. 
 ## References
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
