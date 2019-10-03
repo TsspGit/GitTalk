@@ -289,7 +289,8 @@ Note that  pull requests can be created at the beginning . Future improvements o
 ### Privacity
 
 ## Hacktoberfest
-Most important event ever taking place in October. 
+Most important event ever taking place in October. Show relevant information about this event.
+
 ## References
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
