@@ -286,7 +286,17 @@ Doing a pull request is a way of merging two branches using the GitHub online in
 
 Note that  pull requests can be created at the beginning . Future improvements of our project will be reflected as commits in the correspoding pull request. Finally, when everything is ready branches can be merged. 
 
-### Privacity
+### Privacy
+
+There exist two types of repositories, public and private repos. 
+* Public repositories can be seen by anyone and `git clone` (fork).
+* Private repositories can only be seen by owners and collaborators. 
+* Permisions [link](https://help.github.com/en/articles/permission-levels-for-a-user-account-repository):  There are mainly two permission levels: Owner and collaborators. The Owner can invite collaborators **(3 for free accounts)** , change the visibility of the repository (private or public), and limit interactions with a repository (for 24h). Collaborators can only edit the repository in regards to adding and deleting content. 
+
+Furthermore, GitHub will never acces to a private repository without the consent of the owner. However, there are [exeptions](https://help.github.com/en/articles/github-terms-of-service#e-private-repositories). 
+
+### Licence 
+Even though the repositories are set as public repositories,  one might find contrains regarding the use of a software. These contrains are usually stated in a file named as "lisense". Mostly, software can be used but has to be cited.   
 
 ## Hacktoberfest
 Most important event ever taking place in October. 
