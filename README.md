@@ -11,7 +11,7 @@
 
 
 ## 1. Getting started
-Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. GitHub also provides an interactive way to do the things that can be done using a Linux Shell in regards to Git commands. 
+Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is an online remote repository based on Git and thus, has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. From my personal point of view, it has the spirit of social networks but for coding sharing.   
 
 
 ### Git  commands 
@@ -21,16 +21,16 @@ Git commands are typed in the terminal (shell) and have the following general st
 ```
 git [command] [--flags] [arguments]
 ```
-You can also see, Git Help! 
+For instance, Git Help! 
 ```
 git help [command]
-```
-When you type `git help [commnand]`, things like this will appear in your terminal:
+``` 
+Here `[command]` is the `[argument]` of `[help]`. When you type `git help [commnand]`, things like this will appear in your terminal:
 ```
 -f or --flag ## Change the command behaviour, options of the commnand.
 [<placeholders>] ## replace the placeholder by the actual value, arguments.
 ```
-You can just try typing `git help` without `[command]` and the general help will be displayed where the basic commands are listed. 
+You can just try typing `git help` without `[command]` and the general help will be displayed and the basic commands will be listed. 
 ### Example : creating repositories
 We will learn how to get a repository ready for battle. First you need to [install Git](https://git-scm.com/downloads) and have a [GitHub account](https://github.com/), just follow the provided instructions .
 
@@ -48,21 +48,20 @@ Global means that the configuration will be set only for the user of the system.
  cd
  gedit .gitconfig
 ```
-Imagine we have different GitHub accounts (work and home) and we wish to `push` and `pull` our repo. Therefore, we need to configure the information locally, i,e  ` git config --local `.  Moreover, the following code line worked for me well (otherwise git did not identify private repos)
+Imagine we have different GitHub accounts (work and home) and we wish to `push` and `pull` our private repo. Therefore, we need to configure the information locally, i,e  ` git config --local `.  Moreover, the following code line worked for me well (otherwise git did not identify private repos). 
 ```
 git clone https://username@github.com/username/repo_name
 ```
-
-To create a new ropository use 
+To create a new ropository type 
 ```
 mkdir myrepo
 cd myrepo
 git init
 ```
-in the directory where you want it. We can see that we have now a `.git` directory -- use `ls -a`--. Now we can create files, add them to the staging area  and commit them. 
+at the desired directory. We can see that we have now a `.git` directory ( use `ls -a` ). From this point, we can create files, add them to the staging area and commit them. 
 
 * Commit in our local repository: 
- 1. Make changes in the Working Tree, for instance create a file.txt `touch file1.txt`
+ 1. Make changes in the Working Tree, for instance create a file.txt `touch file1.txt`.
  2. Add these changes in the staging area
  ```
  git add file1.txt
