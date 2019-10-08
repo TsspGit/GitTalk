@@ -286,7 +286,7 @@ Doing a pull request is a way of merging two branches using the GitHub online in
 
 Note that  pull requests can be created at the beginning . Future improvements of our project will be reflected as commits in the correspoding pull request. Finally, when everything is ready branches can be merged. 
 
-### Privacity
+### Privacy
 
 There exist two types of repositories, public and private repos. 
 * Public repositories can be seen by anyone and `git clone` (fork).
