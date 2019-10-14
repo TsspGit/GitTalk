@@ -176,7 +176,7 @@ Inside mergear.txt
 
 6. Commit with message "change mergear.txt in merge1"
 
-7. At this point, we have and ancestor commit that the two branches share and two different commits in each of them. If we try to merge the two branches Git will tries a 3-way merge and it would fail. 
+7. At this point, we have an ancestor commit that the two branches share and two different commits in each of them. If we try to merge the two branches, Git will try a 3-way merge and it would fail. 
 ```
 $ git merge merge2
 ```
