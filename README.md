@@ -203,7 +203,7 @@ Maybe, you are adding some funcionalities to your project and you realize that y
 solve a very urgent bug. Also maybe you forgot to commit the last changes and have some
 half-done work. How do you choose what to commit and what not? **git stash**
 
-On *stash_ex* branch one cand find a python file named *sumar.py*. The file consist of a
+On *stash_ex* branch one can find a python file named *sumar.py*. The file consist of a
 simply function and its respective test. Imagine that we are working on a file named
 *restar.py* at the time that we need to solve immediately the error in *sumar.py*.
 ```
