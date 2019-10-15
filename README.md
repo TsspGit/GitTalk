@@ -200,11 +200,11 @@ $ git push origin --delete merge2
 
 ### Example stash:
 Maybe, you are adding some funcionalities to your project and you realize that you have to
-solve a very urgent bug. Also maybe you forgot to commit the last changes and have some
+solve a very urgent bug. Also maybe you forgot to commit the last few changes and have some
 half-done work. How do you choose what to commit and what not? **git stash**
 
 On *stash_ex* branch one can find a python file named *sumar.py*. The file consist of a
-simply function and its respective test. Imagine that we are working on a file named
+simple function and its respective test. Imagine that we are working on a file named
 *restar.py* at the time that we need to solve immediately the error in *sumar.py*.
 ```
 $ vim restar.py
@@ -233,7 +233,7 @@ $ git stash clear
 One way to change the commit's history is using **git rebase**. In this example we will
 integrate changes from one branch into another.
 
-Create a new named *rebase_master*:
+Create a new brand named *rebase_master*:
 ```
 $ git checkout -b rebase_master
 ```
@@ -274,9 +274,9 @@ $ touch newfile.txt
 ```
 $ git rebase rebase_master
 ```
-- See how the working flow have change. The history of *nucleus* has been erased!
+- See how the working flow have changed. The history of *nucleus* has been erased!
 - Let's finalize this example checking that the information contained in each branch is
-  the same than before the rebase. This implies that we need to merge those two branches
+  the same as before the rebase. This implies that we need to merge those two branches
 in order to collect the modifications.
 
 
