@@ -4,8 +4,9 @@
 
 ### Contents
 * [Getting started](#1-getting-started)
-* [Advanced stuff](#2-advanced-stuff)
-* [Workflows](#3-workflows)
+* [Merging example](#2-merging-example)
+* [Advanced stuff](#3-advanced-stuff)
+* [Workflows](#4-workflows)
 * [Hacktoberfest](#hacktoberfest)
 * [References](#references)
 
@@ -282,7 +283,7 @@ $ git rebase rebase_master
 in order to collect the modifications.
 
 
-## 3. Workflows
+## 4. Workflows
 Here, we will review good practices in regards to working as  a team. 
 ### Pull Requests & Issues
 Doing a pull request is a way of merging two branches using the GitHub online interface. Issues can be used to keep tracks of enhancements. 
