@@ -13,6 +13,9 @@
 ## 1. Getting started
 Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is a website  based on Git and thus, it has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. From my personal point of view, it has the spirit of social networks but for code sharing.   
 
+### Install git
+
+We will learn how to get a repository ready for battle. First you need to [install Git](https://git-scm.com/downloads) and have a [GitHub account](https://github.com/), just follow the provided instructions .
 
 ### Git  commands 
 During this talk, we will review the most common commands through examples. We will also introduce the use of Git through common situations where you might end up using it. Furtheremore, Git has [documentation](https://git-scm.com/doc) and an official [book](https://git-scm.com/book/en/v2). For more information, see [references](#references).
@@ -32,8 +35,6 @@ $ [<placeholders>] ## replace the placeholder by the actual value, arguments.
 ```
  Just try typing `git help` without `[command]` and the general help will be displayed where the basic commands are listed. 
 ### Example : creating repositories
-We will learn how to get a repository ready for battle. First you need to [install Git](https://git-scm.com/downloads) and have a [GitHub account](https://github.com/), just follow the provided instructions .
-
  
  #### Create a local repository
 * First, you need to configure the personal info 
