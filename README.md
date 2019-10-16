@@ -76,6 +76,8 @@ we can always see the status of the staging area using `$ git status`.
 ```
 $ git commit -m"comments"
 ```
+Moreover, if we want to ignore a file(s) when commit, we add the paths (files) to ignore in a file named **.gitignore**.
+
 The -m option allows us to introduce the message for the commit. However, if we just type `$ git commit`, Git will display a text editor to write the corresponding message. By default, the text editor is "vim". We can always change the text editor using `$ git config --global core.editor "text_editor"`,  I use sublime  `$ git config --global core.editor "subl -n -w"` . **Exercise: Edit file1.txt and create file2.txt. Then, commit the new files**. 
 4. In order to see the commits history use  `git log` . However, there are several options that can be helpful:
 ```
