@@ -246,8 +246,7 @@ class Wimp:
 	v = 230 # km/s 
 	def __init__(self, mass): 
 		self.m = mass # GeV
-		print("A new WIMP particle has been created!\nmass: {} GeV\nv = {}".format(self.m, self
-		.v))
+		print("A new WIMP particle has been created!\nmass: {} GeV\nv = {}".format(self.m, self.v))
 W = Wimp(100)
 ```
 We would like to add a new class to create the target nucleus on the detector. The first step that we are going to take is to create a new branch named *nucleus*.
@@ -262,7 +261,7 @@ class Nucleus:
 		self.Z = Z 
 		self.N = N
 		self.A = self.Z + self.N
-		self.M = 931.5 * A * 1e-3 # GeV
+		self.M = 931.5 * self.A * 1e-3 # GeV
 		print("A new nucleus has been created!\nMass number: {}\nMass: {} #GeV".format(self.A, self.M))
 N = Nucleus(18, 22)
 ```
