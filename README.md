@@ -63,8 +63,11 @@ $ git init
 at the desired directory. We can see that we have now a `$ .git` directory ( use `ls -a` ). From this point, we can create files, add them to the staging area and commit them. 
 
 * Commit in our local repository: 
- 1. Make changes in the Working Tree, for instance create a file.txt `$ touch file1.txt`.
- 2. Add these changes in the staging area
+ 1. Make changes in the Working Tree, for instance create a file.txt `$ touch file1.txt`. To see the status of files ready to be commited, type 
+ ```
+ git status
+ ```
+  2. Add these changes in the staging area
  ```
 $ git add file1.txt
 ```
@@ -93,6 +96,7 @@ We can create a remote repository using the interface that GitHub provide, and c
 ```
 $ git clone https://github.com/TsspGit/GitTalk.git 
 ```
+**Note about GitHub**: When creating a remote repository, if you want to upload your programs do **not** initialize the repository with a  `README.md`  .
 Or set the path, and push. 
 ```
 $ git remote add origin https://github.com/user/repo
