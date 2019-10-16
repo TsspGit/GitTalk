@@ -129,26 +129,26 @@ $ git checkout FETCH_HEAD
 
 ### Problem: Want to retrieve some older version files?
 ```
-git rm -r .
-git checkout [SHA-1] . ##  introducing the SHA-1 value
-git commit -m"retrieve"
+$ git rm -r .
+$ git checkout [SHA-1] . ##  introducing the SHA-1 value
+$ git commit -m"retrieve"
 ```
 What this code does is `A <- B <- C <-B` , which means that it simply recovers an older version (commit). We may want to restore only one file, this can be done manually, i.e.
 ```
-git checkout [SHA-1 of the commit] 
-git checkout [name of the branch] ## to go back the last commit of the branch
+$ git checkout [SHA-1 of the commit] 
+$ git checkout [name of the branch] ## to go back the last commit of the branch
 ```
 and then manually chose the files. 
 
 HEAD may be important because we can refer to previous commits using `HEAD~n`. Where n represent n-older-version previous commit. For instance, if we want to see the diference between a 3 commits-older version and the current working directory we may use
 ```
-git diff HEAD~3 file.txt
+$ git diff HEAD~3 file.txt
 ```
 We can also retrieve older version using the reference HEAD, i.e. 
 ```
-git rm -r .
-git checkout HEAD~n . 
-git commit -m"retrieve"
+$ git rm -r .
+$ git checkout HEAD~n . 
+$ git commit -m"retrieve"
 ```
 
 Another useful command is `git show [commit] file `, which displays what changes we made regarding an older commit as well as the commit messages.  
