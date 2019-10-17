@@ -15,7 +15,7 @@
 Git is a free and open source software that allows us to improve continously on a project. It is a distributed version control system (DVCS) in which several collaborators can work on the same project.  GitHub is a website  based on Git and thus, it has the same features as Git. However, GitHub allows us to create  Pull Requests, which are a very useful interactive way of merging  Branches. From my personal point of view, it has the spirit of social networks but for code sharing.   
 
 ### Install git
-
+Pull request
 We will learn how to get a repository ready for battle. First you need to [install Git](https://git-scm.com/downloads) and have a [GitHub account](https://github.com/), just follow the provided instructions .
 
 ### Git  commands 
