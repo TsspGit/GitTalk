@@ -309,8 +309,8 @@ There exist two types of repositories, public and private repos.
 
 Furthermore, GitHub will never acces to a private repository without the consent of the owner. However, there are [exeptions](https://help.github.com/en/articles/github-terms-of-service#e-private-repositories). 
 
-### Licence 
-Even though the repositories are set as public repositories,  one might find contrains regarding the use of a software. These contrains are usually stated in a file named as "lisense". Mostly, software can be used but has to be cited.   
+### License 
+Even though the repositories are set as public repositories,  one might find contrains regarding the use of a software. These contrains are usually stated in a file named as "License". Mostly, software can be used but has to be cited.   
 
 ## Hacktoberfest
 Most important event ever taking place in October. 
